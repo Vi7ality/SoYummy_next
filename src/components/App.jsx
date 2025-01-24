@@ -26,7 +26,7 @@ import { useState } from 'react';
 import { CategoriesPage } from 'pages/CategoriesPage/CategoriesPage';
 import { useEffect } from 'react';
 
-const Verification = lazy(() => import('pages/Varification/Verification'));
+const Verification = lazy(() => import('pages/Verification/Verification'));
 const SharedLayout = lazy(() => import('../components/SharedLayout'));
 
 // const Modal = lazy(() => import('../components/Modal'));

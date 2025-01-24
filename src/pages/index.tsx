@@ -1,5 +1,4 @@
-import logoIcon from '../../images/icons/logo_Desktop.svg';
-import React from 'react';
+import logoIcon from '../images/icons/logo_Desktop.svg';
 
 import {
   StartScreenSection,
@@ -9,11 +8,11 @@ import {
   StartTitle,
   StartNav,
   StyledLink,
-} from './StartScreen.styled';
+} from './StartScreen/StartScreen.styled';
 
-import { GoToTop } from 'utils/scrollToTop';
+import { GoToTop } from '../utils/scrollToTop';
 
-export const StartScreen = () => {
+const StartScreen = () => {
   return (
     <>
       <StartScreenSection>
@@ -35,3 +34,5 @@ export const StartScreen = () => {
     </>
   );
 };
+
+export default StartScreen;
