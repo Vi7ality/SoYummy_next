@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Provider as ReduxProvider } from 'react-redux';
-import store from 'redux/store';
+import store from 'redux';
 import { GlobalStyle } from '../GlobalStyle';
+import StyledComponentsRegistry from '@/lib/registry';
 
 export const metadata: Metadata = {
   title: 'So Yummy',
@@ -45,10 +46,12 @@ export default function RootLayout({
     </script> */}
       </head>
       <body>
-        <ReduxProvider store={store}>
-          <div id="root">{children}</div>
-          <GlobalStyle />
-        </ReduxProvider>
+        <StyledComponentsRegistry>
+          <ReduxProvider store={store}>
+            <div id="root">{children}</div>
+            <GlobalStyle />
+          </ReduxProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
