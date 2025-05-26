@@ -1,5 +1,4 @@
 //Done
-import { NavLink } from "react-router-dom"
 import styled from 'styled-components';
 import BgDesktop from '../../images/bg/mainBG_Desktop.webp';
 import BgDesktopRetina from '../../images/bg/mainBG_Desktop_2x.webp';
@@ -7,7 +6,7 @@ import BgTablet from '../../images/bg/mainBG_Tablet.webp';
 import BgTabletRetina from '../../images/bg/mainBG_Tablet_2x.webp';
 import Bgmobile from '../../images/bg/mainBG_Mobile.webp';
 import BgmobileRetina from '../../images/bg/mainBG_Mobile_2x.webp';
-
+import Link from 'next/link';
 
 export const StartScreenSection = styled.section`
   font-family: 'Poppins';
@@ -24,16 +23,15 @@ export const StartScreenSection = styled.section`
   background-image: url('${Bgmobile}');
 
   @media ${props => props.theme.retinaBackgroundImage} {
-      background-image: url('${BgmobileRetina}');
+    background-image: url('${BgmobileRetina}');
   }
 
   @media ${props => props.theme.device.tablet} {
     background-image: url('${BgTablet}');
 
-
     @media ${props => props.theme.retinaBackgroundImage} {
-        background-image: url('${BgTabletRetina}');
-      }
+      background-image: url('${BgTabletRetina}');
+    }
   }
 
   @media ${props => props.theme.device.desktop} {
@@ -41,23 +39,20 @@ export const StartScreenSection = styled.section`
 
     @media ${props => props.theme.retinaBackgroundImage} {
       background-image: url('${BgDesktopRetina}');
+    }
   }
-
-}
-
-`
+`;
 export const Container = styled.div`
-    /* padding-top: 274px;
+  /* padding-top: 274px;
     padding-bottom: 257px;
     padding-right: 35px;
     padding-left: 35px; */
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 
-    @media ${props => props.theme.device.tablet} {
-
+  @media ${props => props.theme.device.tablet} {
   }
-`
+`;
 export const StartScreenLogo = styled.img`
   margin: 0 auto;
   width: 54px;
@@ -68,8 +63,7 @@ export const StartScreenLogo = styled.img`
   @media ${props => props.theme.device.desktop} {
     width: 44px;
   }
-
-`
+`;
 
 export const StartSubtitle = styled.p`
   font-weight: ${props => props.theme.fontWeights.bolt};
@@ -80,8 +74,7 @@ export const StartSubtitle = styled.p`
     margin-top: 44px;
     font-size: 28px;
   }
-
-`
+`;
 
 export const StartTitle = styled.h1`
   display: block;
@@ -91,7 +84,6 @@ export const StartTitle = styled.h1`
   margin-top: 14px;
   font-size: 14px;
   line-height: 1.29;
-
 
   @media ${props => props.theme.device.mobile} {
     width: 305px;
@@ -105,8 +97,7 @@ export const StartTitle = styled.h1`
   @media ${props => props.theme.device.desktop} {
     width: 540px;
   }
-
-`
+`;
 export const StartNav = styled.nav`
   display: flex;
   justify-content: center;
@@ -116,10 +107,8 @@ export const StartNav = styled.nav`
   @media ${props => props.theme.device.tablet} {
     margin-top: 40px;
   }
-
-`
-export const StyledLink = styled(NavLink)`
-
+`;
+export const StyledLink = styled(Link)`
   background-color: ${props => props.theme.colors.accent};
   color: rgb(255, 255, 255);
   border-radius: 24px 44px;
@@ -133,17 +122,18 @@ export const StyledLink = styled(NavLink)`
     margin-left: 14px;
     background-color: transparent;
     border: 1px solid ${props => props.theme.colors.textWhite};
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: ${props => props.theme.colors.accent};
       border: 1px solid ${props => props.theme.colors.accent};
       background-color: transparent;
     }
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: ${props => props.theme.colors.accentDark};
     border: 1px solid ${props => props.theme.colors.accentDark};
-
   }
 
   @media ${props => props.theme.device.tablet} {
@@ -151,10 +141,7 @@ export const StyledLink = styled(NavLink)`
     font-size: 16px;
 
     &:last-child {
-    margin-left: 18px;
+      margin-left: 18px;
     }
   }
-
-`
-
-
+`;

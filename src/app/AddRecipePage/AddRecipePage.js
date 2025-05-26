@@ -1,6 +1,6 @@
 import PopularRecipe from 'components/PopularRecipe/PopularRecipe';
 import MainTitle from 'components/MainTitle/MainTitle';
-import { Page } from '../Favorite/Favorite.styled';
+import { Page } from '../../app/Favorite/Favorite.styled';
 const AddRecipePage = () => (
   <Page>
     <MainTitle text="Add recipe" />

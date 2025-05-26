@@ -8,7 +8,7 @@ import SearchForm from 'components/SearchForm';
 
 import { getSearchRecipes, getSearchIngredients } from 'api/serviseApi';
 
-import { Page } from 'pages/Favorite/Favorite.styled';
+import { Page } from 'app/Favorite/Favorite.styled';
 
 const SearchPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();

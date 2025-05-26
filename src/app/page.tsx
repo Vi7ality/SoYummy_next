@@ -10,7 +10,7 @@ import {
   StyledLink,
 } from './StartScreen/StartScreen.styled';
 
-import { GoToTop } from '../utils/scrollToTop';
+import { GoToTop } from '@/utils/scrollToTop';
 
 const StartScreen = () => {
   return (
@@ -25,8 +25,8 @@ const StartScreen = () => {
             and retrieve your own recipes at any time.
           </StartTitle>
           <StartNav>
-            <StyledLink to="/register">Registration</StyledLink>
-            <StyledLink to="/signin">Sign In</StyledLink>
+            <StyledLink href="/register">Registration</StyledLink>
+            <StyledLink href="/signin">Sign In</StyledLink>
           </StartNav>
         </Container>
       </StartScreenSection>
